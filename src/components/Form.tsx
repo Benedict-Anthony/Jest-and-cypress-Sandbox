@@ -10,6 +10,11 @@ const Form = () => {
                     <input type="text" name='name' id='name' />
                 </div>
                 <div>
+                    <label htmlFor="email">Email</label>
+                    <input type="text" name='email' id='email' placeholder='enter your email' />
+                </div>
+
+                <div>
                     <label htmlFor="bia">About you</label>
                     <textarea name="" id=""></textarea>
                 </div>
@@ -26,8 +31,10 @@ const Form = () => {
                 </div>
                 <div>
 
-                    <label htmlFor="condition">Agree to terms and conditions</label>
-                    <input type="checkbox" name="conditon" id="" />
+                    <label htmlFor="condition">Agree to terms and conditions
+
+                        <input type="checkbox" checked={false} name="conditon" id="" value={"checkbox"} />
+                    </label>
                 </div>
                 <div>
                     <button>Click me</button>

@@ -23,6 +23,21 @@ describe("test the form components", () => {
         expect(buttonElement).toBeInTheDocument()
         expect(buttonElement).toBeEnabled()
 
+        const textLabel = screen.getByLabelText("Name", {
+            selector: "input"
+        })
+
+
+        const emailPlaceHolder = screen.getByPlaceholderText(/enter your email/i)
+
+        expect(emailPlaceHolder).toBeInTheDocument()
+        expect(textLabel).toBeInTheDocument()
+
+        const checkboxElement = screen.getByText((textContent) => textContent.includes("terms"))
+
+        expect(checkboxElement).toBeInTheDocument()
+        expect(checkboxElement).toBeChecked()
+
     })
 
 
